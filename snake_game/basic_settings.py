@@ -1,0 +1,19 @@
+MARGIN = 1      # Отступ
+SIZE_BLOCK = 40  # размер одного блока фона
+FPS = 60    # частота кадров в секунду
+COUNT_BLOCKS = 16   # количество блоков в строке и столбце
+WIDTH = SIZE_BLOCK * COUNT_BLOCKS + 2 * SIZE_BLOCK + MARGIN * COUNT_BLOCKS    # ширина
+HEIGHT = WIDTH   # высота игрового окна
+
+apple_img = pygame.transform.scale(apple_start, (SIZE_BLOCK, SIZE_BLOCK))
+player_img = pygame.transform.scale(player_start, (SIZE_BLOCK, SIZE_BLOCK))
+tail_img = pygame.transform.scale(tail_start, (SIZE_BLOCK, SIZE_BLOCK))
+tail_top = pygame.transform.rotate(tail_img, 180)
+top_img = pygame.transform.rotate(player_img, 180)
+bottom_img = pygame.transform.rotate(player_img, 360)
+tail_bottom = pygame.transform.rotate(tail_img, 360)
+left_img = pygame.transform.rotate(player_img, 270)
+tail_left = pygame.transform.rotate(tail_img, 270)
+right_img = pygame.transform.rotate(player_img, 90)
+tail_right = pygame.transform.rotate(tail_img, 90)
+wall_img = pygame.transform.scale(wall, (SIZE_BLOCK, SIZE_BLOCK))
